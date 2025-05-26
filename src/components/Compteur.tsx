@@ -1,13 +1,10 @@
-import { useState } from "react";
+interface CompteurProps {
+    updateCounter: () => void;
+    compteur: number;
+}
 
-export default function Compteur() {
-    const [compteur, setCompteur] = useState(0);
-
-    const increment = (prevValue: number) => prevValue + 1
-
-    const handleClick= () => setCompteur(increment);
-
+export default function Compteur({updateCounter, compteur}: CompteurProps) {
     return (
-        <button onClick={handleClick}>{compteur}</button>
+        <button onClick={updateCounter}>{compteur}</button>
     )
 }
