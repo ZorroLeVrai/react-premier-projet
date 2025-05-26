@@ -3,7 +3,7 @@ interface CompteurProps {
     compteur: number;
 }
 
-export default function Compteur({updateCounter, compteur}: CompteurProps) {
+export default function Compteur({updateCounter, compteur = 0}: CompteurProps) {
     return (
         <button onClick={updateCounter}>{compteur}</button>
     )
